@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Proyecto-Simu\\",
+  "WorkspaceRootPath": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USUARIO\\Documents\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\MovPelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MovPelota.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Documents\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
+              "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovPelota.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Documents\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
+              "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovPelota.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-09T03:00:13.982Z",
+              "WhenOpened": "2025-11-10T02:38:22.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Portal.cs",
+              "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Portal.cs",
+              "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Portal.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T02:34:25.101Z",
               "EditorCaption": ""
             }
           ]
