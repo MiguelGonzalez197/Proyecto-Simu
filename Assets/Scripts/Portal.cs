@@ -26,19 +26,18 @@ public class Portal : MonoBehaviour
         // Mover objeto
         collision.transform.position = destino.position;
 
-        // Buscar si el objeto es la pelota
         MovPelota movPelota = collision.GetComponent<MovPelota>();
         if (movPelota != null)
         {
-            // Sincronizamos la simulación interna con la nueva posición
+           // Sincronizamos la simulación interna con la nueva posición
             movPelota.XacB1 = destino.position.x;
             movPelota.YacB1 = destino.position.y;
 
-            // Obtener los vectores "Right" locales de cada portal
+            // Obtener los vectores right locales de cada portal
             Vector3 rightOrigen = transform.right;
             Vector3 rightDestino = destino.right;
 
-            // Calcular el ángulo entre ambos Right
+            // Calcular el angulo entre ambos portales con su vector Right
             float angle = Vector3.Angle(rightOrigen, rightDestino);
 
             // Convertimos los componentes de velocidad de la pelota a un Vector3

@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovPelota.cs",
               "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovPelota.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T02:38:22.857Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Portal.cs",
               "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs",
               "RelativeToolTip": "Assets\\Scripts\\Portal.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T02:34:25.101Z",
               "EditorCaption": ""
