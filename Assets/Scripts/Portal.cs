@@ -43,20 +43,37 @@ public class Portal : MonoBehaviour
             // Convertimos los componentes de velocidad de la pelota a un Vector3
             Vector3 velocidad = new Vector3(movPelota.VB1xi, movPelota.VB1yi, 0);
 
+            float angleTwo = Vector3.Angle(rightDestino, velocidad);
+
+            Debug.Log("Angulo entre la pelota y el portal destino: "+ (angleTwo).ToString());
+
             if (angle > 1f) // direcciones diferentes → mantener velocidad
             {
-                movPelota.VB1xi = velocidad.x;
-                movPelota.VB1yi = velocidad.y;
+                
+
+                if(angleTwo < 90f)
+                {
+                    movPelota.VB1xi = velocidad.x;
+                    movPelota.VB1yi = velocidad.y;
+                }
+                else
+                {
+                    ReflejarVelocidad(movPelota, rightDestino, velocidad);
+                }
             }
             else // direcciones iguales → reflejar velocidad
             {
-                Vector3 reflected = Vector3.Reflect(velocidad, rightDestino);
-                movPelota.VB1xi = reflected.x;
-                movPelota.VB1yi = reflected.y;
+                ReflejarVelocidad(movPelota, rightDestino, velocidad);
             }
         }
     }
 
+    private static void ReflejarVelocidad(MovPelota movPelota, Vector3 rightDestino, Vector3 velocidad)
+    {
+        Vector3 reflected = Vector3.Reflect(velocidad, rightDestino);
+        movPelota.VB1xi = reflected.x;
+        movPelota.VB1yi = reflected.y;
+    }
 
     private void OnTriggerExit(Collider collision)
     {
