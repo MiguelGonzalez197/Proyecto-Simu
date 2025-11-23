@@ -108,6 +108,10 @@ public class Disparo : MonoBehaviour
                 if(OrdenPortales==1)
                 {
                     GameObject nuevoPortal=Instantiate(portal1, rb.position, Quaternion.identity);
+                    Portal referenciaPortal = nuevoPortal.GetComponent<Portal>();
+                    Vector3 posicionPelota = transform.position + Normal * 2;
+                    referenciaPortal.EstablecerDireccion(posicionPelota);
+
                     nuevoPortal.name = "Portal1_" + ConjuntoPortales;
                     PosicionPortal=rb.position;
 
@@ -116,6 +120,11 @@ public class Disparo : MonoBehaviour
                 else if(OrdenPortales==2)
                 {
                     GameObject nuevoPortal = Instantiate(portal2, rb.position, Quaternion.identity);
+
+                    Portal referenciaPortal = nuevoPortal.GetComponent<Portal>();
+                    Vector3 posicionPelota = transform.position + Normal * 2;
+                    referenciaPortal.EstablecerDireccion(posicionPelota);
+
                     nuevoPortal.name = "Portal2_" + ConjuntoPortales;
                     PosicionPortal = rb.position;
                     Debug.Log("Segundo Portal");

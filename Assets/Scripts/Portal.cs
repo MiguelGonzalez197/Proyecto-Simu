@@ -6,6 +6,13 @@ public class Portal : MonoBehaviour
     [SerializeField] private Transform destino;
     private HashSet<GameObject> objetosPortal = new HashSet<GameObject>();
 
+    public void EstablecerDireccion(Vector3 posicion)
+    {
+        transform.LookAt(posicion);
+        transform.Rotate(Vector3.up * -90f, Space.Self);
+    }
+
+
     private void OnTriggerEnter(Collider collision)
     {
         if (objetosPortal.Contains(collision.gameObject)) return;

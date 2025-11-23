@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\portal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\TrayectoriaDisparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\TrayectoriaDisparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\assets\\scripts\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\disparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movpelota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0391135A-B02E-EB5E-A03D-16C60CA7E7BF}|Unity.RenderPipelines.Universal.Shaders.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Library\\PackageCache\\com.unity.render-pipelines.universal@0b68ece7aa54\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{0391135A-B02E-EB5E-A03D-16C60CA7E7BF}|Unity.RenderPipelines.Universal.Shaders.csproj|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@0b68ece7aa54\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\TrayectoriaDisparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\TrayectoriaDisparo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GestorDisparos.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\GestorDisparos.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GestorDisparos.cs",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MovPelota.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovPelota.cs",
@@ -58,8 +58,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MovPelota.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T03:12:37.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T03:12:37.14Z"
             },
             {
               "$type": "Document",
@@ -69,27 +68,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Portal.cs",
               "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs",
               "RelativeToolTip": "Assets\\Scripts\\Portal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T03:12:29.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Disparo.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Disparo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Disparo.cs",
               "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Disparo.cs",
               "RelativeToolTip": "Assets\\Scripts\\Disparo.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAApwIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAgwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T02:11:12.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Lit.shader",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Library\\PackageCache\\com.unity.render-pipelines.universal@0b68ece7aa54\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@0b68ece7aa54\\Shaders\\Lit.shader",
@@ -101,15 +100,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "TrayectoriaDisparo.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\TrayectoriaDisparo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TrayectoriaDisparo.cs",
               "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\TrayectoriaDisparo.cs",
               "RelativeToolTip": "Assets\\Scripts\\TrayectoriaDisparo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T00:54:03.726Z"
+              "WhenOpened": "2025-11-23T00:54:03.726Z",
+              "EditorCaption": ""
             }
           ]
         }
