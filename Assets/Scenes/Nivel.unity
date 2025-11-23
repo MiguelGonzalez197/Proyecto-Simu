@@ -3141,13 +3141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Normal: {x: 0, y: 0, z: 0}
-  VB1xi: 0
-  VB1yi: 0
-  XacB1: 0
-  YacB1: 0
+  velocidad1: {x: 2, y: 0, z: 0}
+  velocidad2: {x: 0, y: 0, z: 0}
   MB1: 1
-  VB2xi: 0
-  VB2yi: 0
   MB2: 1e+10
   Vt_B1: 0
   Vn_B1: 0
@@ -3156,9 +3152,10 @@ MonoBehaviour:
   e: 0
   angulo: 0
   Vn_B1_Final: 0
-  Vn_B2_Final: 0
   g: 0
   ColisionT: 0
+  MovActivo: 1
+  Posicion: {x: 0, y: 0, z: 0}
 --- !u!54 &1995865269
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3271,7 +3268,7 @@ Transform:
   m_GameObject: {fileID: 1995865267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.008727774, z: -0, w: 0.9999619}
-  m_LocalPosition: {x: 8.08, y: -0.41, z: -0.51}
+  m_LocalPosition: {x: -0.98, y: 0.15, z: -0.11}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []

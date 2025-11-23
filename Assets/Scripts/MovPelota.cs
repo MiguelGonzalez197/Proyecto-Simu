@@ -5,37 +5,47 @@ public class MovPelota : MonoBehaviour
     public Vector3 Normal=Vector3.zero;
     public Vector3 velocidad1, velocidad2;
     
-    public float  MB1, VB2xi, VB2yi,MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
+    public float  MB1,MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
     public float Vn_B1_Final, g;
     public bool ColisionT;
+    public bool MovActivo;
 
     Rigidbody rb;
+
+    public Vector3 Posicion;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         g = -9.8f;
+        MB1 = 1;
+        MB2 = 10000000000000000000;
+        MovActivo = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (ColisionT)
+        if (MovActivo)
         {
-            Colision();
 
-        }
-        else
-        {
-            velocidad1.y += g * Time.fixedDeltaTime;
-            if (velocidad1.y > -0.1f && velocidad1.y < 0.1f)
+            if (ColisionT)
             {
-                velocidad1.y = -0.1f;
+                Colision();
+
             }
+            else
+            {
+                velocidad1.y += g * Time.fixedDeltaTime;
+                if (velocidad1.y > -0.1f && velocidad1.y < 0.1f)
+                {
+                    velocidad1.y = -0.1f;
+                }
+            }
+            rb.position = rb.position + velocidad1 * Time.fixedDeltaTime;
+            Posicion = rb.position;
+            ColisionT = false;
         }
-        rb.position = rb.position + velocidad1 * Time.fixedDeltaTime;
-     
-        ColisionT = false;
     }
     void OnCollisionStay(Collision c)
     {
