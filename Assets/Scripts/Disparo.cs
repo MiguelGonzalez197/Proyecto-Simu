@@ -2,13 +2,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class Disparo : MonoBehaviour
 {
-//----------------------Variables para simular el disparo------------------
-
+    //----------------------Variables para simular el disparo------------------
+    [SerializeField] private GestorDisparos gestor;
     public Vector3 Normal = Vector3.zero; //Vector de direccion de la colision
     public Vector3 velocidad1, velocidad2; 
 
-    public float MB1, VB2xi, VB2yi, MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
-    public float Vn_B1_Final, g;
+    private float MB1, VB2xi, VB2yi, MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
+    private float Vn_B1_Final, g;
     public bool ColisionT;
 
     Rigidbody rb;
@@ -21,10 +21,10 @@ public class Disparo : MonoBehaviour
     public bool DisparoActivo;
 
 
-//----------------------Variables para la trayectoria del disparo------------------
-    public LineRenderer lr;
-    public int puntos = 30;     
-    public float dt = 0.1f;     
+    //----------------------Variables para la trayectoria del disparo------------------
+    [SerializeField] private LineRenderer lr;
+    private int puntos = 30;     
+    private float dt = 0.1f;     
     public Vector3 velocidadInicial;
 //----------------------Control de rebotes---------------------
     public int CantRebotes;
@@ -41,6 +41,7 @@ public class Disparo : MonoBehaviour
 
     void Start()
     {
+        
         DisparoActivo = false;
         rb = GetComponent<Rigidbody>();
         g = 0f;
@@ -49,6 +50,8 @@ public class Disparo : MonoBehaviour
         PortalActivo = false;
         Rebotes = 1;
         e = 1f;
+        puntoDisparo = gestor.GetPosInicial();
+        
     }
     void Update()
     {
@@ -105,6 +108,7 @@ public class Disparo : MonoBehaviour
             }
             else if(ColisionT && Rebotes==CantRebotes)
             {
+             
                 if(OrdenPortales==1)
                 {
                     GameObject nuevoPortal=Instantiate(portal1, rb.position, Quaternion.identity);
@@ -136,17 +140,17 @@ public class Disparo : MonoBehaviour
             else
             {
                 velocidad1.y += g * Time.fixedDeltaTime;
-
+                Debug.Log("NoHayColison");
             }
             rb.position = rb.position + velocidad1 * Time.fixedDeltaTime;
 
             ColisionT = false;
         }
     }
-    void OnCollisionStay(Collision c)
+    void OnCollisionEnter(Collision c)
     {
-        Normal = c.GetContact(0).normal;
-
+        Normal = c.GetContact(0).normal; 
+        
         ColisionT = true;
 
     }

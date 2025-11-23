@@ -5,8 +5,8 @@ public class MovPelota : MonoBehaviour
     public Vector3 Normal=Vector3.zero;
     public Vector3 velocidad1, velocidad2;
     
-    public float  MB1,MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
-    public float Vn_B1_Final, g;
+    private float  MB1,MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
+    private float Vn_B1_Final, g;
     public bool ColisionT;
     public bool MovActivo;
 

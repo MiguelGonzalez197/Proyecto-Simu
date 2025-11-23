@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 3058410031700241606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.008727774, z: -0, w: 0.9999619}
-  m_LocalPosition: {x: -14.9, y: -0.08, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.9, y: -0.08, z: 0.21719}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,7 +110,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.48
+  m_Radius: 0.15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4889269782124186816
 Rigidbody:
@@ -151,31 +151,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6befe9cdcc6514e8c9fc6b9c811388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestor: {fileID: 1007523376228784757, guid: c6d9b9c7ae9191746b4f7b94a96f7f6d, type: 3}
   Normal: {x: 0, y: 0, z: 0}
   velocidad1: {x: 10, y: 10, z: 0}
   velocidad2: {x: 0, y: 0, z: 0}
-  MB1: 0
-  VB2xi: 0
-  VB2yi: 0
-  MB2: 0
-  Vt_B1: 0
-  Vn_B1: 0
-  Vt_B2: 0
-  Vn_B2: 0
-  e: 0
-  angulo: 0
-  Vn_B1_Final: 0
-  g: 0
   ColisionT: 0
   puntoDisparo: {x: -15, y: 0, z: 0}
   puntoMouse: {x: 0, y: 0, z: 0}
   direccion: {x: 0, y: 0, z: 0}
   DisparoActivo: 0
   lr: {fileID: 4011291498246067236}
-  puntos: 40
-  dt: 0.1
   velocidadInicial: {x: 0, y: 0, z: 0}
-  CantRebotes: 1
+  CantRebotes: 2
   Rebotes: 0
   portal1: {fileID: 6288881379330618018, guid: ea3e4ee0d5b00664aaa4cbfdcd8ef620, type: 3}
   portal2: {fileID: 8127911841778955586, guid: 5848a94a48b50434586b6f473dd68d75, type: 3}

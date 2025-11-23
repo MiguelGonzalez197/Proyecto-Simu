@@ -26,8 +26,9 @@ public class GestorDisparos : MonoBehaviour
     void Start()
     {
         OrdenPortales = 1;
-        PosicionInicial.x = -15;
-        PosicionInicial.y = 0;
+        PosicionInicial.x = -6.13f;
+        PosicionInicial.y = -1.85f;
+        PosicionInicial.z = 0.21719f;
         CantRebotes = 1;
         PortalActivo = false;
 
@@ -111,5 +112,12 @@ public class GestorDisparos : MonoBehaviour
     {
         MovPelota script= Pelota.GetComponent<MovPelota>();
         script.MovActivo = true;
+    }
+
+    public  Vector3 GetPosInicial()
+    {
+        
+        return PosicionInicial;
+        
     }
 }
