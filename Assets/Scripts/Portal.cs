@@ -30,8 +30,8 @@ public class Portal : MonoBehaviour
         if (movPelota != null)
         {
            // Sincronizamos la simulación interna con la nueva posición
-            movPelota.XacB1 = destino.position.x;
-            movPelota.YacB1 = destino.position.y;
+            movPelota.Posicion.x = destino.position.x;
+            movPelota.Posicion.y = destino.position.y;
 
             // Obtener los vectores right locales de cada portal
             Vector3 rightOrigen = transform.right;
@@ -41,7 +41,7 @@ public class Portal : MonoBehaviour
             float angle = Vector3.Angle(rightOrigen, rightDestino);
 
             // Convertimos los componentes de velocidad de la pelota a un Vector3
-            Vector3 velocidad = new Vector3(movPelota.VB1xi, movPelota.VB1yi, 0);
+            Vector3 velocidad = new Vector3(movPelota.velocidad1.x, movPelota.velocidad1.y, 0);
 
             float angleTwo = Vector3.Angle(rightDestino, velocidad);
 
@@ -53,8 +53,8 @@ public class Portal : MonoBehaviour
 
                 if(angleTwo < 90f)
                 {
-                    movPelota.VB1xi = velocidad.x;
-                    movPelota.VB1yi = velocidad.y;
+                    movPelota.velocidad1.x = velocidad.x;
+                    movPelota.velocidad1.y = velocidad.y;
                 }
                 else
                 {
@@ -71,12 +71,16 @@ public class Portal : MonoBehaviour
     private static void ReflejarVelocidad(MovPelota movPelota, Vector3 rightDestino, Vector3 velocidad)
     {
         Vector3 reflected = Vector3.Reflect(velocidad, rightDestino);
-        movPelota.VB1xi = reflected.x;
-        movPelota.VB1yi = reflected.y;
+        movPelota.velocidad1.x = reflected.x;
+        movPelota.velocidad1.y = reflected.y;
     }
 
     private void OnTriggerExit(Collider collision)
     {
         objetosPortal.Remove(collision.gameObject);
+    }
+    public void SetDestino(Transform nuevoDestino)
+    {
+        destino = nuevoDestino;
     }
 }

@@ -1,15 +1,18 @@
 using UnityEngine;
-
+using UnityEngine.EventSystems;
 public class Disparo : MonoBehaviour
 {
-    public Vector3 Normal = Vector3.zero;
-    public Vector3 velocidad1, velocidad2;
+//----------------------Variables para simular el disparo------------------
+
+    public Vector3 Normal = Vector3.zero; //Vector de direccion de la colision
+    public Vector3 velocidad1, velocidad2; 
 
     public float MB1, VB2xi, VB2yi, MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
     public float Vn_B1_Final, g;
     public bool ColisionT;
 
     Rigidbody rb;
+    //----------------------Variables para ajustar angulo de disparo------------------
 
     public Vector3 puntoDisparo;
     public Vector3 puntoMouse;
@@ -17,29 +20,63 @@ public class Disparo : MonoBehaviour
 
     public bool DisparoActivo;
 
+
+//----------------------Variables para la trayectoria del disparo------------------
     public LineRenderer lr;
-    public int puntos = 30;     // resolución de la curva
-    public float dt = 0.1f;     // paso de tiempo entre puntos
+    public int puntos = 30;     
+    public float dt = 0.1f;     
     public Vector3 velocidadInicial;
+//----------------------Control de rebotes---------------------
+    public int CantRebotes;
+    public int Rebotes;
+    //----------------------Creacion Portales---------------------
+    public GameObject portal1;
+    public GameObject portal2;
+    public GameObject NuevoDisparo;
+    public bool PortalActivo;
+    public int OrdenPortales;
+
+    public Vector3 PosicionPortal;
+    public int ConjuntoPortales;
 
     void Start()
     {
         DisparoActivo = false;
         rb = GetComponent<Rigidbody>();
         g = 0f;
+        MB1 = 1;
+        MB2 = 10000000000000000;
+        PortalActivo = false;
+        Rebotes = 1;
+        e = 1f;
     }
     void Update()
     {
+
         if (!DisparoActivo)
         {
             puntoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             puntoMouse.z = puntoDisparo.z;
 
             direccion = (puntoMouse - puntoDisparo).normalized;
+            if(direccion.x <0)
+            {
+                direccion.x = 0;
+                if (direccion.y > 0)
+                {
+                    direccion.y = 1;  
+                }
+                else
+                {
+                    direccion.y = -1;
+                }
+            }
             velocidad1 = direccion * 10f;
 
             if (Input.GetMouseButtonDown(0))
             {
+                if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+                    return;
                 DisparoActivo = true;
                 lr.enabled = false;
             }
@@ -59,10 +96,33 @@ public class Disparo : MonoBehaviour
     {
         if (DisparoActivo)
         {
-            if (ColisionT)
+            
+            if (ColisionT && Rebotes<CantRebotes)
             {
                 Colision();
+                Rebotes++;
+                Debug.Log("Rebbote");
+            }
+            else if(ColisionT && Rebotes==CantRebotes)
+            {
+                if(OrdenPortales==1)
+                {
+                    GameObject nuevoPortal=Instantiate(portal1, rb.position, Quaternion.identity);
+                    nuevoPortal.name = "Portal1_" + ConjuntoPortales;
+                    PosicionPortal=rb.position;
 
+                    Debug.Log("Primer Portal");
+                }
+                else if(OrdenPortales==2)
+                {
+                    GameObject nuevoPortal = Instantiate(portal2, rb.position, Quaternion.identity);
+                    nuevoPortal.name = "Portal2_" + ConjuntoPortales;
+                    PosicionPortal = rb.position;
+                    Debug.Log("Segundo Portal");
+                    
+
+                }
+                PortalActivo = true;
             }
             else
             {
