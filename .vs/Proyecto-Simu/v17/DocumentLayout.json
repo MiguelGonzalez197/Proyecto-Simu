@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|c:\\users\\migue\\onedrive\\documentos\\github\\proyecto-simu\\assets\\scripts\\victoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D217DDA-7803-E839-FE21-CE9694592857}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\victoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Menu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu.cs",
+              "ToolTip": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Menu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T04:18:26.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Victoria.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Victoria.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Victoria.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MovPelota.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\MovPelota.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovPelota.cs",
@@ -51,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Portal.cs",
               "DocumentMoniker": "C:\\Users\\Migue\\OneDrive\\Documentos\\GitHub\\Proyecto-Simu\\Assets\\Scripts\\Portal.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Portal.cs",
