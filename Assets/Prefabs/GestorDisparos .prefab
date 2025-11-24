@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7c668f755535b4897b26be19614afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CantRebotes: 1
+  CantRebotes: 2
   OrdenPortales: 1
   Rebotes: 0
   ObjDisparo: {fileID: 3058410031700241606, guid: a5c9794d5cf5cf44994f95e519e11afb, type: 3}
-  PosicionInicial: {x: -6.13, y: -1.85, z: 0}
+  PosicionInicial: {x: -13.27, y: -2.67, z: 0}
   PortalActivo: 0
   UbiPortal1: {x: 0, y: 0, z: 0}
   UbiPortal2: {x: 0, y: 0, z: 0}
@@ -56,4 +56,4 @@ MonoBehaviour:
   ParesPortales: 0
   textoBoton: {fileID: 0}
   MovActivo: 0
-  Pelota: {fileID: 3058410031700241606, guid: a5c9794d5cf5cf44994f95e519e11afb, type: 3}
+  Pelota: {fileID: 2027032918155312253, guid: 8b1697a72c3667d4ba811f8091bd3cdc, type: 3}

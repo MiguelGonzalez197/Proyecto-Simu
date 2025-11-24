@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 public class Disparo : MonoBehaviour
 {
@@ -26,7 +26,9 @@ public class Disparo : MonoBehaviour
     private int puntos = 30;     
     private float dt = 0.1f;     
     public Vector3 velocidadInicial;
-//----------------------Control de rebotes---------------------
+
+    public GameObject imagenBrazo;
+    //----------------------Control de rebotes---------------------
     public int CantRebotes;
     public int Rebotes;
     //----------------------Creacion Portales---------------------
@@ -48,26 +50,28 @@ public class Disparo : MonoBehaviour
         MB1 = 1;
         MB2 = 10000000000000000;
         PortalActivo = false;
-        Rebotes = 1;
+        Rebotes = 0;
         e = 1f;
         puntoDisparo = gestor.GetPosInicial();
-        
+        imagenBrazo = GameObject.Find("pato-brazos");
+
     }
     void Update()
     {
 
         if (!DisparoActivo)
         {
+            GetComponent<Renderer>().enabled = false;
             puntoMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             puntoMouse.z = puntoDisparo.z;
 
             direccion = (puntoMouse - puntoDisparo).normalized;
-            if(direccion.x <0)
+            if (direccion.x < 0)
             {
                 direccion.x = 0;
                 if (direccion.y > 0)
                 {
-                    direccion.y = 1;  
+                    direccion.y = 1;
                 }
                 else
                 {
@@ -85,13 +89,18 @@ public class Disparo : MonoBehaviour
             }
             else
             {
-                 
-               
-                DibujarTrayectoria(puntoDisparo,velocidad1);
-                
+
+                float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
+                imagenBrazo.transform.rotation = Quaternion.Euler(0, 0, angulo);
+                DibujarTrayectoria(puntoDisparo, velocidad1);
+
             }
         }
-       
+        else
+        {
+            GetComponent<Renderer>().enabled = true;
+        }
+
 
     }
     // Update is called once per frame
@@ -108,10 +117,15 @@ public class Disparo : MonoBehaviour
             }
             else if(ColisionT && Rebotes==CantRebotes)
             {
-             
-                if(OrdenPortales==1)
+                Vector3 Posicion;
+
+                if (OrdenPortales==1)
                 {
-                    GameObject nuevoPortal=Instantiate(portal1, rb.position, Quaternion.identity);
+                    
+                    Vector3 direccion = Normal.normalized;
+                    Quaternion rotacion = Quaternion.FromToRotation(Vector3.right, direccion);
+                    Posicion= rb.position + Normal * 0.05f;
+                    GameObject nuevoPortal=Instantiate(portal1,Posicion, rotacion);
                     Portal referenciaPortal = nuevoPortal.GetComponent<Portal>();
                     Vector3 posicionPelota = transform.position + Normal * 2;
                     referenciaPortal.EstablecerDireccion(posicionPelota);
@@ -123,7 +137,10 @@ public class Disparo : MonoBehaviour
                 }
                 else if(OrdenPortales==2)
                 {
-                    GameObject nuevoPortal = Instantiate(portal2, rb.position, Quaternion.identity);
+                    Vector3 direccion = Normal.normalized;
+                    Quaternion rotacion = Quaternion.FromToRotation(Vector3.right, direccion);
+                    Posicion = rb.position + Normal * 0.05f;
+                    GameObject nuevoPortal = Instantiate(portal2, Posicion, rotacion);
 
                     Portal referenciaPortal = nuevoPortal.GetComponent<Portal>();
                     Vector3 posicionPelota = transform.position + Normal * 2;
@@ -180,49 +197,65 @@ public class Disparo : MonoBehaviour
     }
     public void DibujarTrayectoria(Vector3 posInicial, Vector3 velInicial)
     {
+        int Reb = 0;
         int maxPuntos = puntos;
         float pasoTiempo = dt;
+        int ultimoPunto = 0;
 
         lr.positionCount = maxPuntos;
 
         Vector3 pos = posInicial;
         Vector3 vel = velInicial;
 
+
         for (int i = 0; i < maxPuntos; i++)
         {
+            ultimoPunto = i;
             lr.startWidth = 0.05f;
             lr.endWidth = 0.05f;
             lr.startColor = new Color(0.4f, 0.8f, 1f, 1f);
             lr.SetPosition(i, pos);
 
-            // -------- 1. Calcular siguiente posición sin colisiones --------
-            Vector3 nuevaPos = pos + vel * pasoTiempo ;
+            // -------- 1. Calcular siguiente posiciÃ³n sin colisiones --------
+            Vector3 nuevaPos = pos + vel * pasoTiempo;
 
             // -------- 2. Detectar si choca --------
             Vector3 dir = (nuevaPos - pos).normalized;
             float distancia = Vector3.Distance(pos, nuevaPos);
 
-            if (Physics.Raycast(pos, dir, out RaycastHit hit, distancia))
+            if (Physics.Raycast(pos, dir, out RaycastHit hit, distancia,
+                ~0, QueryTriggerInteraction.Ignore))
             {
-                // Dibujar punto exacto de contacto
+                // Dibujar punto del impacto
                 lr.SetPosition(i, hit.point);
 
-                // -------- 3. Calcular rebote --------
-                Vector3 normal = hit.normal;
+                if (Reb < CantRebotes)
+                {
+                    // -------- 3. Calcular rebote --------
+                    Vector3 normal = hit.normal;
 
-                // velocidad final después del rebote con restitución
-                float e = 1f; // puedes poner la restitución
-                vel = Vector3.Reflect(vel, normal) * e;
+                    float e = 1f; // coeficiente de restituciÃ³n
+                    vel = Vector3.Reflect(vel, normal) * e;
 
-                // nueva posición después del rebote
-                pos = hit.point + normal * 0.01f; // para evitar quedarse “pegado”
+                    // Nueva posiciÃ³n tras rebote
+                    pos = hit.point + normal * 0.01f;
 
-                continue;
+                    Reb++;
+                    continue;
+                }
+                else
+                {
+                    // âŒ YA NO HAY MÃS REBOTES â†’ DETENER GRAFICACIÃ“N
+                    ultimoPunto = i;
+                    break;
+                }
             }
 
-            // -------- 4. Si NO chocó, continuar trayectoria --------
-           
+            // -------- 4. Si NO chocÃ³, avanzar normalmente --------
             pos = nuevaPos;
         }
+
+        // -------- 5. Ajustar cantidad REAL de puntos dibujados --------
+        lr.positionCount = ultimoPunto + 1;
     }
 }

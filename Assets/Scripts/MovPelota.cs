@@ -3,7 +3,7 @@
 public class MovPelota : MonoBehaviour
 {
     public Vector3 Normal=Vector3.zero;
-    public Vector3 velocidad1, velocidad2;
+    public Vector3 velocidad1, velocidad2,velocidadInicial;
     
     private float  MB1,MB2, Vt_B1, Vn_B1, Vt_B2, Vn_B2, e, angulo;
     private float Vn_B1_Final, g;
@@ -13,6 +13,7 @@ public class MovPelota : MonoBehaviour
     Rigidbody rb;
 
     public Vector3 Posicion;
+    public Vector3 PosicionInicial;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class MovPelota : MonoBehaviour
         MB1 = 1;
         MB2 = 10000000000000000000;
         MovActivo = false;
+        velocidadInicial= new Vector3(8, 0, 0);
+        velocidad1 = velocidadInicial;
+        PosicionInicial = rb.position;
     }
 
     // Update is called once per frame
@@ -43,8 +47,13 @@ public class MovPelota : MonoBehaviour
                 }
             }
             rb.position = rb.position + velocidad1 * Time.fixedDeltaTime;
-            Posicion = rb.position;
+            
             ColisionT = false;
+        }
+        else
+        {
+            rb.position = PosicionInicial;
+            velocidad1 = velocidadInicial;
         }
     }
     void OnCollisionStay(Collision c)

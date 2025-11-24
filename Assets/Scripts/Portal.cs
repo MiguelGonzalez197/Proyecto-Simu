@@ -8,8 +8,7 @@ public class Portal : MonoBehaviour
 
     public void EstablecerDireccion(Vector3 posicion)
     {
-        transform.LookAt(posicion);
-        transform.Rotate(Vector3.up * -90f, Space.Self);
+     
     }
 
 
@@ -41,6 +40,7 @@ public class Portal : MonoBehaviour
         Disparo movDisparo = collision.GetComponent<Disparo>();
         if (movDisparo != null)
         {
+
             // Obtener los vectores right locales de cada portal
             Vector3 rightOrigen = transform.right;
             Vector3 rightDestino = destino.right;
